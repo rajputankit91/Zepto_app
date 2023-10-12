@@ -1,0 +1,435 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --main-color: white;
+  --secondary-color: rgba(255,50,105);
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  transition: all 2s ease-out;
+}
+
+.type-list {
+  width: 20%;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 2px 2px 18px rgba(1,0,0,.08);
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.typeName{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.typeName:hover{
+  background: linear-gradient(270deg,#f7e4ff 73.74%,#f0ccff);
+  color: #7c0ab1;
+  font-weight: 700;
+  border-left: 4px solid rgba(124,10,177);
+}
+
+.item-list {
+  width: 95%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(5,auto);
+  justify-items: center;
+  align-content: space-evenly;
+  gap: 50px;
+  margin-top: 10px;
+  margin-left: 10px;  
+}
+
+.itemName{
+  border-radius: 10px;
+  width: 136px;
+  height: 216px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 2px 2px 18px rgba(1,0,0,.08);
+  box-sizing: content-box;
+}
+
+.itemName img{
+  width: 136px;
+  height: 108px;
+}
+
+.shortDescrip{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shortDescrip .itemPrice{
+  margin-right: 40px;
+}
+
+.shortDescrip button{
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  border: none;
+  width: 50px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.shortDescrip .addClass{
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  width: 50px;
+  height: 20px;
+  margin: 0px;
+}
+
+.shortDescrip .addClass div{
+  width: 100%;
+  text-align: center;
+  padding-top: 1px;
+}
+
+.shortDescrip .addClass .quantity{
+  width: 60px;
+  border-left: 1px solid var(--secondary-color);
+  border-right: 1px solid var(--secondary-color);
+}
+
+.shortDescrip button:hover{
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.header {
+  grid-area: header;
+  background-color: #3c006b;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 4;
+}
+
+#logo {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 10%;
+ box-sizing: border-box;
+ border-right:2px solid gray; 
+}
+
+#logo img{
+  width: 105px;
+  height: 35px;
+}
+
+.inputSection{
+  display: flex;
+  width: 50%;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.inputSection > div{
+  height: 42px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.inputSection img{
+  width: 16px;
+  height: 16px;
+}
+
+.inputSection input{
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  outline-style: none;
+}
+
+.header > button{
+  background-color: rgba(255,50,105);
+  outline-style: none;
+  border: none;
+  border-radius: 8px;
+  width: 120px;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+}
+
+h2{
+  grid-row: 1/1 ;
+  grid-column: 1/-1 ;
+  margin: 20px;
+  padding: 0;
+  height: 40px;
+}
+
+#itemDetails{
+  grid-row: 1/1;
+  grid-column: 1/-1;
+  width: 700px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr );
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  padding: 10px;
+  justify-items: center;
+  box-sizing: border-box;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  position: fixed;
+  background-color: antiquewhite;
+}
+
+#itemDetails img{
+  grid-row: 1/5;
+  grid-column: 1/2;
+  justify-self: start;
+  width: 300px;
+  height: 300px;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+}
+
+#itemDetails h3{
+  grid-row: 1/1;
+  grid-column: 2/-1;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}
+
+#itemDetails  div{
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  width: 120px;
+  grid-row: 2/3; 
+}
+
+#itemDetails div:nth-child(5){
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#itemDetails div:nth-child(5) div{
+  background: linear-gradient(rgb(99, 7, 141) 0%, rgb(174, 0, 255) 100%);
+  font-weight: 600;
+  width: 80px;
+  color: white;
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+#itemDetails div:nth-child(6){
+  grid-row: 3/3;
+  grid-column: 2/-1;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+}
+
+#itemDetails .addClass {
+  grid-row: 4/4;
+  grid-column: 2/-1;
+  align-self: center;
+  justify-self: center;
+  width: 112px;
+  height: 48px;
+  color: white;
+  font-weight: 600;
+  background-color: rgba(255,50,105);
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.popUp{
+  width: 100%;
+  position: fixed;
+  top: 82px;
+  width: 350px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none; 
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.loginPopUp{
+  width: 350px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 8px;
+  justify-content:space-evenly;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  background-image: url("https://cdn.zeptonow.com/mweb-prod/tr:w-0.2,ar-0.2-0.2,pr-true,f-webp,q-80//images/bg-login.svg");
+}
+
+.loginPopUp div input{
+  width: 200px;
+  height: 25px;
+  border-radius: 2px;
+  border: none;
+  outline-style: none ;
+}
+
+.loginPopUp label{
+  width: 80px;
+  display: inline-block;
+}
+
+.loginPopUp > button{
+  background-color: rgba(255,50,105);
+  outline-style: none;
+  border: none;
+  border-radius: 8px;
+  width: 80px;
+  height: 30px;
+  color: white;
+}
+
+.cartDiv{
+  position: fixed;
+  top: 80px;
+  right: -342px;
+  width: 350px;
+  height: calc(100vh - 80px);
+  background-color: #7c0ab1;
+  overflow: auto;
+  margin-bottom: 200px;
+  color: white;
+  transition: all 2s ease-out;
+}
+
+.cartDiv #cartBlock{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border-bottom: 1px solid gray;
+}
+
+.cartDiv #cartBlock .cartItemDetails{
+  width: 200px;
+  text-align: center;
+}
+
+.cartDiv #cartBlock .cartItemDetails .addClass {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60px;
+  height: 70%;
+  color: white;
+  font-weight: 600;
+  background-color: rgba(255,50,105);
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.priceAndQuantity{
+  display: flex;
+  justify-content: space-around;
+  height: 35px;
+  align-items: center;
+}
+
+.cartDiv .total{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 140px;
+  padding-top: 0px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 5px;
+  position: sticky;
+  top: 0px;
+  background-color: #7c0ab1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.total div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:   100%;
+  height: 20px;
+}
+
+.total div p{
+  width: 100px;
+  padding-left: 20px;
+}
+
+.hideCart{
+  position:fixed;
+  top: 120px;
+  right: -14px;
+  width: 80px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  transform: rotate(270deg);
+  text-align: center;
+  padding-top: 10px;
+  z-index: 1;
+  border-radius: 10px 10px 0px 0px;
+  transition: all 2s ease-out;
+}
+
+.itemName:hover{
+  transform: scale(1.01);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+
